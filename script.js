@@ -1,6 +1,7 @@
 // Global variables needed across functions
 let playerScore = 0;
 let computerScore = 0;
+let roundNumber = 0;
 const playerBoard = document.querySelector(".playerBoard");
 const computerBoard = document.querySelector(".computerBoard");
 const results = document.querySelector(".results");
@@ -21,11 +22,8 @@ function computerChoice() {
     }
 }
 
-//  Plays a round of the game. Compares playerChoice to computerChoice
+//  Plays a round of the game. Compares playerChoice to computerChoice. Increments player and computer score. Increments round number.
 function playRound (playerChoice, computerChoice) {
-  //const results = document.querySelector(".results");
-  //const playerBoard = document.querySelector(".playerBoard");
-  //const computerBoard = document.querySelector(".computerBoard");
       //  Checks for a draw
       if (playerChoice == computerChoice) {
           results.textContent = "It's a draw!";
@@ -63,19 +61,26 @@ function playRound (playerChoice, computerChoice) {
       };
   playerBoard.textContent = "Player Score: " + playerScore;
   computerBoard.textContent = "Computer Score: " + computerScore;
+  ++roundNumber;
 };
 
 const choices = document.querySelectorAll('button');
+const roundCounter = document.querySelector('.roundCounter');
   choices.forEach((button) => {
   button.addEventListener('click',(e) =>{
     let playerChoice = button.value;
+    //Stops function from running or plays round
   if (playerScore >= 5 || computerScore >= 5) {return;
-  } else { playRound(playerChoice, computerChoice());}
+  } else {
+    playRound(playerChoice, computerChoice());
+    roundCounter.textContent = "Round: " + roundNumber;
+  };
 
-  if (playerScore == 5) {
-    gameOver.textContent = "Game Over! Congradualations! You've won!";
+  if (playerScore == 5) { //Diaplys game over message
+    gameOver.classList.add("gameOver");
+    gameOver.textContent = "Game Over! Congratualations! You've won!";
     } else if (computerScore == 5){
-    gameOver.classList.add(gameOverMessage);
+    gameOver.classList.add("gameOver");
     gameOver.textContent = "Game Over! I'm sorry, you've lost.";
     };
   results.appendChild(gameOver);

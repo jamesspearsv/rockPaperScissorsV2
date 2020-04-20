@@ -1,7 +1,44 @@
-h1 {
-  text-align: center;
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: #77D9F7;
+  font: 1em sans-serif;
 }
 
-.selections {
-  align-content: center;
+.header {
+
+}
+
+img {
+  background-color: white;
+  border: .5em solid black;
+  border-radius: 20px;
+  padding: 15px
+}
+
+.choices {
+  margin: 25px;
+}
+
+.buttons {
+  margin-left: 2%;
+  margin-top: 1%
+}
+
+.playerBoard, .computerBoard {
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 3%;
+  padding: 1%;
+  width: 40%;
+  background: white;
+}
+
+.results {
+ margin: 15px;
+}
+
+.gameOver {
+  margin: 15px;
+  font-size: 4em;
 }
