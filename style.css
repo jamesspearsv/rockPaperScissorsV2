@@ -1,6 +1,5 @@
 body {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  
   background-color: #77D9F7;
   font: 1em sans-serif;
 }
