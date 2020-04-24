@@ -9,7 +9,7 @@ body {
   grid-template-columns: 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(100px, 100%);
-  justify-items: center;
+  justify-items: strech;
   grid-template-areas:
     "mainContent"
     "sidebarLeft"
@@ -65,7 +65,6 @@ body {
   background-color: #eee;
   border: 2px solid black;
   padding: 2%;
-  width: 86%;
 }
 
 .mainContent {
