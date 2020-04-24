@@ -18,6 +18,13 @@ body {
     ;
 }
 
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+}
+
 @media screen and (min-device-width: 600px) {
   body {
     display: grid;
@@ -37,14 +44,6 @@ body {
     width: 86%;
   }
 }
-
-.choices {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  justify-items: center;
-}
-
 
 /*--Styling--*/
 body {
