@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rock, Paper, Scissors!</title>
+        <title>Rock, Paper, Scissors Game</title>
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8"/>
     </head>
     <body>
-        <div class="header">
-          <h1>We are going to play rock, paper, scissors!</h1>
-          <h2>First player to 5 points wins!</h2>
+      <div class="sidebarLeft">
+        <p>Hello, Let me introduce myself...</p>
+        <p>My name is James.</p>
+        <p>I am new to WebDev, but I love learning!</p>
+      </div>
+      <div class="mainContent">
+          <div class="header">
+            <h1>We are going to play rock, paper, scissors!</h1>
+            <h2>First player to 5 points wins!</h2>
+          </div>
+          <div class="choices">
+            <img src="contentFiles/rock.png" height="50px" width="50px">
+            <img src="contentFiles/paper.png" height="50px" width="50px">
+            <img src="contentFiles/scissors.png" height="50px" width="50px">
+            <button class="buttons" value="rock">ROCK</button>
+            <button class="buttons" value="paper">PAPER</button>
+            <button class="buttons" value="scissors">SCISSORS</button>
+          </div>
+          <div class="scoreBoard">
+            <div class="roundCounter">Round: </div>
+            <div class="playerBoard">Player Score:</div>
+            <div class="computerBoard">Computer Score:</div>
+          </div>
+          <div class="results">
+            <p>Go ahead and make your first choice</p>
+          </div>
         </div>
-
-        <div class="choices">
-          <img src="contentFiles/rock.png" height="100px" width="100px">
-          <img src="contentFiles/paper.png" height="100px" width="100px">
-          <img src="contentFiles/scissors.png" height="100px" width="100px">
-          <br>
-          <button class="buttons" value="rock">ROCK</button>
-          <button class="buttons" value="paper">PAPER</button>
-          <button class="buttons" value="scissors">SCISSORS</button>
-        </div>
-
-        <div class="scoreBoard">
-          <div class="roundCounter">Round: </div>
-          <div class="playerBoard">Player Score:</div>
-          <div class="computerBoard">Computer Score:</div>
-        </div>
-
-        <div class="results">
-          <p>Go ahead and make your first choice</p>
-          <p>First one to 5 wins!</p>
-        </div>
+      <div class="sidebarRight">
+        <p>This is my attempt at designing a UI.</p>
+        <p>I styled this with CSS Grid.</p>
+      </div>
+      <div class="footer">
+        <p>James Spears, V</p>
+        <p>©2020</p>
+      </div>
     </body>
 </html>
 
